@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Usuários Cadastrados</h2>
+    <input [(ngModel)]="filtroNome" placeholder="Filtrar por nome" class="form-control mb-3" />
+    <button (click)="filtrarUsuarios()" class="btn btn-primary mb-3">Filtrar</button>
+  
+    <ul class="list-group">
+      <li *ngFor="let usuario of usuariosFiltrados" class="list-group-item">
+        {{ usuario.nome }}
+      </li>
+    </ul>
+  </div>
+  
