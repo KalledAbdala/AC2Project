@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { UsuarioService } from 'src/app/services/usuario.service';
+import { UsuarioService } from '../../services/usuario.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 
 export class LoginComponent {
@@ -18,7 +16,7 @@ export class LoginComponent {
   constructor(private usuarioService: UsuarioService, private router: Router) {}
 
   onSubmit() {
-    this.usuarioService.getUsuario(this.email, this.senha).subscribe((usuario) => {
+    this.usuarioService.getUsuario(this.email, this.senha).subscribe((usuario: any) => {
       if (usuario.length) {
         this.router.navigate(['/principal']);
       } else {

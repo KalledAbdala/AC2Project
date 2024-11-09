@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-principal',
